@@ -76,7 +76,7 @@ piece square.invisible {
 	visibility: hidden;
 }
 
-/* Article 2 : boutons/objectifs et safari */
+/* Article 2 : safari */
 
 zones {
 	display: flex;
@@ -94,4 +94,28 @@ zones {
 zones zone {
 	background: #8EA823;
 	border: 5px inset #A7C628;
+}
+
+square.elephant {
+	background-image: url("img/animals/elephant.png");
+}
+
+square.giraffe {
+	background-image: url("img/aniùals/giraffe.png");
+}
+
+square.lion {
+	background-image: url("img/animals/lion.png");
+}
+
+square.cow {
+	background-image: url("img/animals/cow.png");
+}
+
+square.rhino {
+	background-image: url("img/animals/rhino.png");
+}
+
+square.zebrea {
+	background-image: url("img/animals/zebra.png");
 }
