@@ -9,3 +9,6 @@ https://openclassrooms.com/forum/sujet/lancer-cmd-linux-depuis-script-js-94074
 https://course.oc-static.com/ftp-tutos/cours/javascript/part5/chap5/ex9.html
 view-source:https://course.oc-static.com/ftp-tutos/cours/javascript/part5/chap5/ex9.html
 
+---
+
+L'interface dit "la piece est mal placée" "dans la mauvaise rotation"

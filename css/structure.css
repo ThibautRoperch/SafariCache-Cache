@@ -4,7 +4,7 @@ body {
 	background: rgba(0, 0, 0, 0.1);
 }
 
-section {
+header, section {
 	display: flex;
 	flex-direction: row;
 	width: 80%;
@@ -14,8 +14,12 @@ section {
 article {
 	flex: 1;
 	display: flex;
-	margin: 10px;
+	margin-right: 20px;
 	background: white;
+}
+
+article:last-child {
+	margin-right: 0;
 }
 
 piece, zone {
@@ -31,10 +35,31 @@ piece square, zone square {
 	height: 50px;
 }
 
+/* Header : contrôles */
+
+header {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	background: white;
+}
+
+header > * {
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+}
+
+header > * > * {
+	flex: 1;
+}
+
 /* Article 1 : pièces */
 
-article#gauche {
+pieces {
+	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: space-around;
 }
 
@@ -53,33 +78,7 @@ piece square.invisible {
 
 /* Article 2 : boutons/objectifs et safari */
 
-article#droit {
-	flex-direction: column;
-}
-
-article#droit div, objectif {
-	display: flex;
-	flex-direction: row;
-}
-
-article#droit div boutons, article#droit div objectifs {
-	display: flex;
-	flex-direction: column;
-}
-	
-article#droit div#controles > *, article#droit div#controles boutons > *, article#droit div#controles objectifs objectif > * {
-	flex: 1;
-}
-
-article#droit div boutons button, article#droit div objectifs objectif {
-	width: 70%;
-}
-
-article#droit div#controles {
-	margin-bottom: 30px;
-}
-
-div#safari zones {
+zones {
 	display: flex;
 	flex-wrap: wrap;
 	width: 350px;
@@ -92,12 +91,7 @@ div#safari zones {
 	border: 5px outset #A7C628;
 }
 
-div#safari zones zone {
+zones zone {
 	background: #8EA823;
 	border: 5px inset #A7C628;
 }
-
-div#safari zones zone square {
-
-}
-
