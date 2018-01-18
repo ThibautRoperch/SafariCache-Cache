@@ -22,17 +22,17 @@ article:last-child {
 	margin-right: 0;
 }
 
-piece, zone {
+piece, zone { /* changer ces tailles a un impact sur zones */
 	display: flex;
 	flex-wrap: wrap;
-	width: 150px;
-	height: 150px;
+	width: 225px; /* 3 * square width */
+	height: 225px; /* 3 * square height */
 }
 
-piece square, zone square {
+piece square, zone square { /* changer ces tailles a un impact sur piece et zone */
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 75px;
+	height: 75px;
 }
 
 /* Header : contrôles */
@@ -64,7 +64,13 @@ pieces {
 }
 
 piece {
-	margin: 50px 10%;
+	margin: 50px 1.5%;
+	cursor: grab;
+}
+
+piece:active {
+	margin: 50px 1.5%;
+	cursor: grabbing;
 }
 
 piece square {
@@ -81,41 +87,49 @@ piece square.invisible {
 zones {
 	display: flex;
 	flex-wrap: wrap;
-	width: 350px;
-	height: 350px;
-	padding: 5px;
+	width: 500px; /* 2 * zone width + 4 * border width + 30 (espace au milieu) */
+	height: 500px; /* 2 * zone height + 4 * border width + 30 (espace au milieu) */
+	padding: 10px;
 	justify-content: space-around;
 	align-content: space-around;
 	margin: auto;
 	background: #A7C628;
 	border: 5px outset #A7C628;
+	border-radius: 10px;
 }
 
 zones zone {
 	background: #8EA823;
 	border: 5px inset #A7C628;
+	border-radius: 5px;
+}
+
+square {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 75%;
 }
 
 square.elephant {
-	background-image: url("img/animals/elephant.png");
+	background-image: url("../img/animals/elephant.png");
 }
 
 square.giraffe {
-	background-image: url("img/aniùals/giraffe.png");
+	background-image: url("../img/animals/giraffe.png");
 }
 
 square.lion {
-	background-image: url("img/animals/lion.png");
+	background-image: url("../img/animals/lion.png");
 }
 
 square.cow {
-	background-image: url("img/animals/cow.png");
+	background-image: url("../img/animals/cow.png");
 }
 
 square.rhino {
-	background-image: url("img/animals/rhino.png");
+	background-image: url("../img/animals/rhino.png");
 }
 
-square.zebrea {
-	background-image: url("img/animals/zebra.png");
+square.zebra {
+	background-image: url("../img/animals/zebra.png");
 }
