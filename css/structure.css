@@ -1,0 +1,103 @@
+body {
+	display: flex;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	margin: auto;
+}
+
+article {
+	flex: 1;
+	display: flex;
+	margin: 10px;
+	background: white;
+}
+
+piece, zone {
+	display: flex;
+	flex-wrap: wrap;
+	width: 150px;
+	height: 150px;
+}
+
+piece square, zone square {
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+/* Article 1 : pièces */
+
+article#gauche {
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+piece {
+	margin: 50px 10%;
+}
+
+piece square {
+	background: #A7C628;
+	box-shadow: 0 0 5px #A7C628;
+}
+
+piece square.invisible {
+	visibility: hidden;
+}
+
+/* Article 2 : boutons/objectifs et safari */
+
+article#droit {
+	flex-direction: column;
+}
+
+article#droit div, objectif {
+	display: flex;
+	flex-direction: row;
+}
+
+article#droit div boutons, article#droit div objectifs {
+	display: flex;
+	flex-direction: column;
+}
+	
+article#droit div#controles > *, article#droit div#controles boutons > *, article#droit div#controles objectifs objectif > * {
+	flex: 1;
+}
+
+article#droit div boutons button, article#droit div objectifs objectif {
+	width: 70%;
+}
+
+article#droit div#controles {
+	margin-bottom: 30px;
+}
+
+div#safari zones {
+	display: flex;
+	flex-wrap: wrap;
+	width: 350px;
+	height: 350px;
+	padding: 5px;
+	justify-content: space-around;
+	align-content: space-around;
+	margin: auto;
+	background: #A7C628;
+	border: 5px outset #A7C628;
+}
+
+div#safari zones zone {
+	background: #8EA823;
+	border: 5px inset #A7C628;
+}
+
+div#safari zones zone square {
+
+}
+
