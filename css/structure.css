@@ -11,12 +11,15 @@ header, section {
 	margin: auto;
 }
 
+header, article {
+	background: rgba(255, 255, 255, 0.7);
+}
+
 article {
 	flex: 1;
 	display: flex;
 	margin-right: 20px;
 	padding: 50px;
-	background: white;
 }
 
 article:last-child {
@@ -32,10 +35,11 @@ piece, zone { /* changer ces tailles a un impact sur zones */
 
 piece square, zone square { /* changer ces tailles a un impact sur piece et zone */
 	display: block;
-	width: 73px;
-	height: 73px;
+	width: 75px;
+	height: 75px;
 	border: 1px solid #8EA823;
 	background-color: #8EA823;
+	border-width: 0px;
 	background-repeat: no-repeat;
 }
 
@@ -50,7 +54,6 @@ header {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 20px;
-	background: white;
 }
 
 header > * {
@@ -95,8 +98,7 @@ piece:active {
 }
 
 piece > square {
-	border-style: outset;
-	border-radius: 3px;
+	/* border-style: outset; */
 	transition: box-shadow .2s ease;
 	background-size: 300%;
 	background-image: url("../img/jungle/jungle1.jpeg");
@@ -138,7 +140,7 @@ zones zone {
 
 zone > square {
 	background-size: 75%;
-	border-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 1px rgba(0, 0, 0.1);
 	background-position: center center;	
 }
 

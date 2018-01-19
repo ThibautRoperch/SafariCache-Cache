@@ -19,7 +19,9 @@ for(element of droppers) {
     element.onmouseout = function() { overed = null; };
 }
 
+compute_animals();
 
+// Récupération de la position de la souris
 function retrieve_mouse_pos(event) {
     mouse_pos_actual = [event.clientX, event.clientY];
 }
@@ -57,9 +59,9 @@ function place(piece) {
     }, 15);
 }
 
+// Rotation la pièce de 90 degrés sans le sens horaire
 function rotate(piece) {
     piece_pos = piece_translation(piece);
-    // piece.style.transition = "all 5s linear";
     piece.style.transform = "translate(" + piece_pos[0] + "px, " + piece_pos[1] + "px) rotate(" + parseInt(piece_rotation(piece) + 90) + "deg)";
 
     if (piece_rotation(piece) % 360 == 0) { // quand la rotation revient à 360, on repasse en outset
@@ -85,8 +87,12 @@ function append_piece(piece, destination) {
     }
 
     destination.appendChild(piece);
+
+    // Actualise le nombre d'animaux cachés
+    compute_animals();
 }
 
+// Récupère les valeurs de la translation de la pièce
 function piece_translation(piece) {
     // translate(1px,2px) rotate(3deg)
 
@@ -102,6 +108,7 @@ function piece_translation(piece) {
     return piece_pos;
 }
 
+// Récupère la valeur de la rotation de la pièce
 function piece_rotation(piece) {
     // translate(1px,2px) rotate(3deg)
 
@@ -119,4 +126,43 @@ function piece_rotation(piece) {
     piece_angle = parseInt(piece_angle[1]);
 
     return piece_angle;
+}
+
+// Calcule le nombre d'animaux non cachés par les pièces
+function compute_animals() {
+    var nb_animals = new Array(); // nombre d'animaux
+
+    // Compte tous les animaux
+    nb_animals[0] = document.querySelectorAll(".elephant").length;
+    nb_animals[1] = document.querySelectorAll(".giraffe").length;
+    nb_animals[2] = document.querySelectorAll(".lion").length;
+    nb_animals[3] = document.querySelectorAll(".rhino").length;
+    nb_animals[4] = document.querySelectorAll(".zebra").length;
+
+    // Pour chaque zone, enlève les animaux cachés par leur pièce
+    for(zone of document.getElementsByTagName("zones")[0].children) {
+        if (zone.id === "zone1" && zone.childElementCount > 9) {
+            var piece = zone.lastElementChild;
+            switch (piece.id) {
+                case "piece1":
+                    switch(piece_rotation(piece) % 90) {
+                        case 0:
+                            nb_animals[0] -= 2;
+                            nb_animals[1] -= 1;
+                            nb_animals[2] -= 1;
+                            nb_animals[3] -= 1;
+                            nb_animals[4] -= 2;
+                            break;
+                    }
+                    break;
+                case "piece2":
+                    break;
+            }
+        }
+    }
+
+    var animal_id = 0;
+    for(animal of document.getElementsByTagName("objectives")[0].getElementsByTagName("statut")) {
+        animal.innerHTML = nb_animals[animal_id++];
+    }
 }
