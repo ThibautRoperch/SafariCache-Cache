@@ -1,7 +1,18 @@
+
 body {
 	display: flex;
 	flex-direction: column;
 	background: rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+img.background {
+	position: absolute;
+	top: -50px;
+	left: -50px;
+	width: 110%;
+	filter: blur(5px);
+	z-index: -100;
 }
 
 header, section {
@@ -53,7 +64,7 @@ square.invisible {
 header {
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 20px;
+	margin: 20px auto;
 }
 
 header > * {
@@ -140,8 +151,9 @@ piece > square:nth-child(9) {
 	background-position: bottom right;
 }
 
-piece:active > square {
-	box-shadow: 0 0 10px #8EA823;
+piece:active {
+	border-radius: 50px;
+
 }
 
 /* Article 2 : safari */

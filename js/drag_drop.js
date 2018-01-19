@@ -10,7 +10,7 @@ let overed = null; // dropper survolé
 var draggables = document.querySelectorAll(".draggable");
 for(element of draggables) {
     element.onmousedown = function() { mouse_pos_previous = mouse_pos_actual; dragging = true; move(this); };
-    element.onmouseup = function() { if (duration < 200) rotate(this); dragging = false; duration = 0; this.style.visibility = "hidden"; place(this) };
+    element.onmouseup = function() { if (duration < 50) rotate(this); else { place(this); this.style.visibility = "hidden"; } dragging = false; duration = 0; };
 }
 
 var droppers = document.querySelectorAll(".dropper");
@@ -56,6 +56,9 @@ function place(piece) {
 
         // Ajout de la pièce à l'élément correspondant
         append_piece(piece, overed);
+
+        // Actualise le nombre d'animaux cachés
+        compute_animals();
     }, 15);
 }
 
@@ -69,6 +72,9 @@ function rotate(piece) {
     } else if (piece_rotation(piece) % 180 == 0) { // sinon, quand la rotation est à demi-tour, on passe en inset
         for (square of piece.getElementsByTagName("square")) square.style.borderStyle = "inset";
     }
+
+    // Actualise le nombre d'animaux cachés
+    compute_animals();
 }
 
 // Ajoute la pièce à l'élément DOM donné
@@ -87,9 +93,6 @@ function append_piece(piece, destination) {
     }
 
     destination.appendChild(piece);
-
-    // Actualise le nombre d'animaux cachés
-    compute_animals();
 }
 
 // Récupère les valeurs de la translation de la pièce
@@ -145,17 +148,32 @@ function compute_animals() {
             var piece = zone.lastElementChild;
             switch (piece.id) {
                 case "piece1":
-                    switch(piece_rotation(piece) % 90) {
+                    switch((piece_rotation(piece) % 180) / 90) {
                         case 0:
-                            nb_animals[0] -= 2;
-                            nb_animals[1] -= 1;
-                            nb_animals[2] -= 1;
-                            nb_animals[3] -= 1;
-                            nb_animals[4] -= 2;
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 0;
                             break;
                     }
                     break;
                 case "piece2":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 2; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 2; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                        case 2:
+                            nb_animals[0] -= 2; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 2; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                    }
+                    break;
+                case "piece3":
                     break;
             }
         }
