@@ -174,6 +174,36 @@ function compute_animals() {
                     }
                     break;
                 case "piece3":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 2;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                            break;
+                    }
+                    break;
+                case "piece4":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 2;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 2; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                    }
                     break;
             }
         }
