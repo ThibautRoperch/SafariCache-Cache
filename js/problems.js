@@ -33,19 +33,19 @@ function new_problem() {
     for (animal in defi) {
         switch (animal) {
             case "elephant":
-                document.getElementsByTagName("objectives")[0].getElementsByClassName("elephant")[0].parentNode.getElementsByTagName("goal")[0].innerHTML = defi[animal];
+                document.getElementsByTagName("objectives")[0].getElementsByClassName("elephant")[0].innerHTML = defi[animal];
                 break;
             case "gazelle":
-                document.getElementsByTagName("objectives")[0].getElementsByClassName("giraffe")[0].parentNode.getElementsByTagName("goal")[0].innerHTML = defi[animal];
+                document.getElementsByTagName("objectives")[0].getElementsByClassName("giraffe")[0].innerHTML = defi[animal];
                 break;
             case "lion":
-                document.getElementsByTagName("objectives")[0].getElementsByClassName("lion")[0].parentNode.getElementsByTagName("goal")[0].innerHTML = defi[animal];
+                document.getElementsByTagName("objectives")[0].getElementsByClassName("lion")[0].innerHTML = defi[animal];
                 break;
             case "rhinoceros":
-                document.getElementsByTagName("objectives")[0].getElementsByClassName("rhino")[0].parentNode.getElementsByTagName("goal")[0].innerHTML = defi[animal];
+                document.getElementsByTagName("objectives")[0].getElementsByClassName("rhino")[0].innerHTML = defi[animal];
                 break;
             case "zebre":
-                document.getElementsByTagName("objectives")[0].getElementsByClassName("zebra")[0].parentNode.getElementsByTagName("goal")[0].innerHTML = defi[animal];
+                document.getElementsByTagName("objectives")[0].getElementsByClassName("zebra")[0].innerHTML = defi[animal];
                 break;
         }
     }

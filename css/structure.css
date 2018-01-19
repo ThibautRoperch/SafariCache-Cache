@@ -97,12 +97,29 @@ header {
 
 header > * {
 	display: flex;
-	padding: 10px;
 	flex-direction: column;
 }
 
-header commands > * {
+header commands button {
 	flex: 1;
+	display: inline-block;
+	width: 175px;
+	line-height: 42px;
+	border: 0px;
+	color: rgba(0, 0, 0, 0.6);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	background: rgba(255, 255, 255, 0.15);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+header commands button:hover {
+	color: rgba(0, 0, 0, 0.75);
+	background: rgba(255, 255, 255, 0.4);
+}
+
+header commands button:last-child {
+	border-bottom: 0px;
 }
 
 header objectives {
@@ -122,20 +139,27 @@ header objective > * {
 	margin: auto;
 }
 
-header objective statut, header objective goal {
-	/* display: none; */
+header objective statut {
+	display: none;
 }
 
 header objective animal {
 	display: block;
-	width: 50px;
-	height: 50px;
-	overflow: hidden;
+	width: 60px; /* = height */
+	height: 60px; /* = width */
+	line-height: 60px; /* = height */
+	font-size: 28px;
+	color: white;
+	font-weight: bold;
+	font-family: Courier New, Courier, monospace;
+	text-align: center;
 	background-color: rgba(255, 255, 255, 0.5);
 	background-size: 75%;
 	background-repeat: no-repeat;
 	background-position: center center;	
+	overflow: hidden;
 	border-radius: 50px;
+	text-shadow: 0 0 15px black;
 }
 
 header objective.valid animal {

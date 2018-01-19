@@ -136,11 +136,11 @@ function compute_animals() {
     var nb_animals = new Array(); // nombre d'animaux
 
     // Compte tous les animaux
-    nb_animals[0] = document.querySelectorAll(".elephant").length;
-    nb_animals[1] = document.querySelectorAll(".giraffe").length;
-    nb_animals[2] = document.querySelectorAll(".lion").length;
-    nb_animals[3] = document.querySelectorAll(".rhino").length;
-    nb_animals[4] = document.querySelectorAll(".zebra").length;
+    nb_animals[0] = document.getElementById("safari").querySelectorAll(".elephant").length;
+    nb_animals[1] = document.getElementById("safari").querySelectorAll(".giraffe").length;
+    nb_animals[2] = document.getElementById("safari").querySelectorAll(".lion").length;
+    nb_animals[3] = document.getElementById("safari").querySelectorAll(".rhino").length;
+    nb_animals[4] = document.getElementById("safari").querySelectorAll(".zebra").length;
 
     // Pour chaque zone, décrémente les animaux cachés par leur pièce
     for(zone of document.getElementsByTagName("zones")[0].children) {
@@ -397,7 +397,6 @@ function compute_animals() {
             }   //fin switch
         } //fin if(zone 4)
     }
-    
 
     // Affiche le nombre d'occurences de chaque animal
     var animal_id = 0;
@@ -406,8 +405,8 @@ function compute_animals() {
     }
 
     // Valide les objectifs validés
-    for(objective of document.getElementsByTagName("objectives")) {
-        if (objective.getElementsByTagName("statut")[0].innerHTML === objective.getElementsByTagName("goal")[0].innerHTML) {
+    for(objective of document.getElementsByTagName("objectives")[0].getElementsByTagName("objective")) {
+        if (objective.getElementsByTagName("statut")[0].innerHTML === objective.getElementsByTagName("animal")[0].innerHTML) {
             objective.className = "valid";
         } else {
             objective.className = "";
