@@ -110,6 +110,34 @@ piece > square:nth-child(2) {
 	background-position: top center;
 }
 
+piece > square:nth-child(3) {
+	background-position: top right;
+}
+
+piece > square:nth-child(4) {
+	background-position: center left;
+}
+
+piece > square:nth-child(5) {
+	background-position: center center;
+}
+
+piece > square:nth-child(6) {
+	background-position: center right;
+}
+
+piece > square:nth-child(7) {
+	background-position: bottom left;
+}
+
+piece > square:nth-child(8) {
+	background-position: bottom center;
+}
+
+piece > square:nth-child(9) {
+	background-position: bottom right;
+}
+
 piece:active > square {
 	box-shadow: 0 0 10px #8EA823;
 }
