@@ -37,7 +37,6 @@ piece square, zone square { /* changer ces tailles a un impact sur piece et zone
 	border: 1px solid #8EA823;
 	background-color: #8EA823;
 	background-repeat: no-repeat;
-	background-position: center center;
 }
 
 square.invisible {
@@ -103,6 +102,14 @@ piece > square {
 	background-image: url("../img/jungle/jungle1.jpeg");
 }
 
+piece > square:nth-child(1) {
+	background-position: top left;
+}
+
+piece > square:nth-child(2) {
+	background-position: top center;
+}
+
 piece:active > square {
 	box-shadow: 0 0 10px #8EA823;
 }
@@ -132,6 +139,7 @@ zones zone {
 zone > square {
 	background-size: 75%;
 	border-color: rgba(0, 0, 0, 0.1);
+	background-position: center center;	
 }
 
 square.elephant {
