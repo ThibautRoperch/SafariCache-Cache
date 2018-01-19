@@ -207,7 +207,197 @@ function compute_animals() {
                     break;
             }
         }
+        if (zone.id === "zone2" && zone.childElementCount > 9) {
+            var piece = zone.lastElementChild;
+            switch (piece.id) {
+                case "piece1":
+                    switch((piece_rotation(piece) % 180) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece2":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 1 ; nb_animals[4] -= 0;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                            break;
+                        case 2:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 0; nb_animals[4] -= 0;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                            break;
+                    }
+                    break;
+                case "piece3":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece4":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                } //fin switch
+            } //fin if(zone 2)
+        if (zone.id === "zone3" && zone.childElementCount > 9) {
+            var piece = zone.lastElementChild;
+            switch (piece.id) {
+                case "piece1":
+                    switch((piece_rotation(piece) % 180) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 0; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece2":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2 ; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                        case 2:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece3":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 0;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 0; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece4":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 2; nb_animals[4] -= 0;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 2; nb_animals[4] -= 0;
+                            break;
+                    }
+                    break;
+            }   //fin switch
+        }   // fin if(zone 3)
+        if (zone.id === "zone4" && zone.childElementCount > 9) {
+            var piece = zone.lastElementChild;
+            switch (piece.id) {
+                case "piece1":
+                    switch((piece_rotation(piece) % 180) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece2":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0 ; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 2:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 0; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece3":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 0; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+                case "piece4":
+                    switch((piece_rotation(piece) % 360) / 90) {
+                        case 0:
+                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                            break;
+                        case 1:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                        break;
+                        case 2:
+                            nb_animals[0] -= 0; nb_animals[1] -= 1; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 0;
+                            break;
+                        case 3:
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            break;
+                    }
+                    break;
+            }   //fin switch
+        } //fin if(zone 4)
     }
+    
 
     var animal_id = 0;
     for(animal of document.getElementsByTagName("objectives")[0].getElementsByTagName("statut")) {
