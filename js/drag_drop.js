@@ -59,6 +59,7 @@ function place(piece) {
 
 function rotate(piece) {
     piece_pos = piece_translation(piece);
+    // piece.style.transition = "all 5s linear";
     piece.style.transform = "translate(" + piece_pos[0] + "px, " + piece_pos[1] + "px) rotate(" + parseInt(piece_rotation(piece) + 90) + "deg)";
 
     if (piece_rotation(piece) % 360 == 0) { // quand la rotation revient à 360, on repasse en outset

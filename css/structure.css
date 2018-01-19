@@ -36,6 +36,8 @@ piece square, zone square { /* changer ces tailles a un impact sur piece et zone
 	height: 73px;
 	border: 1px solid #8EA823;
 	background-color: #8EA823;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 square.invisible {
@@ -93,13 +95,15 @@ piece:active {
 	z-index: 1000;
 }
 
-piece square {
+piece > square {
 	border-style: outset;
 	border-radius: 3px;
 	transition: box-shadow .2s ease;
+	background-size: 300%;
+	background-image: url("../img/jungle/jungle1.jpeg");
 }
 
-piece:active square {
+piece:active > square {
 	box-shadow: 0 0 10px #8EA823;
 }
 
@@ -125,11 +129,9 @@ zones zone {
 	border-radius: 5px;
 }
 
-zone square {
-	background-repeat: no-repeat;
-	background-position: center center;
+zone > square {
 	background-size: 75%;
-	border-radius: 5px;
+	border-color: rgba(0, 0, 0, 0.1);
 }
 
 square.elephant {
