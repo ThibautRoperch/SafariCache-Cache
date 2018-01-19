@@ -142,7 +142,7 @@ function compute_animals() {
     nb_animals[3] = document.querySelectorAll(".rhino").length;
     nb_animals[4] = document.querySelectorAll(".zebra").length;
 
-    // Pour chaque zone, enlève les animaux cachés par leur pièce
+    // Pour chaque zone, décrémente les animaux cachés par leur pièce
     for(zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.id === "zone1" && zone.childElementCount > 9) {
             var piece = zone.lastElementChild;
@@ -209,8 +209,18 @@ function compute_animals() {
         }
     }
 
+    // Affiche le nombre d'occurences de chaque animal
     var animal_id = 0;
     for(animal of document.getElementsByTagName("objectives")[0].getElementsByTagName("statut")) {
         animal.innerHTML = nb_animals[animal_id++];
+    }
+
+    // Valide les objectifs validés
+    for(objective of document.getElementsByTagName("objectives")) {
+        if (objective.getElementsByTagName("statut")[0].innerHTML === objective.getElementsByTagName("goal")[0].innerHTML) {
+            objective.className = "valid";
+        } else {
+            objective.className = "";
+        }
     }
 }

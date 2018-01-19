@@ -23,7 +23,11 @@ header, section {
 }
 
 header, article {
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(245, 245, 220, 0.308);
+}
+
+section.hide {
+	display: none;
 }
 
 article {
@@ -49,14 +53,38 @@ piece square, zone square { /* changer ces tailles a un impact sur piece et zone
 	width: 75px;
 	height: 75px;
 	border: 1px solid #8EA823;
-	background-color: #8EA823;
 	border-width: 0px;
+	background-color: #8EA823;
 	background-repeat: no-repeat;
 }
 
 square.invisible {
 	visibility: hidden;
 	box-shadow: none;
+}
+
+.elephant {
+	background-image: url("../img/animals/elephant.png");
+}
+
+.giraffe {
+	background-image: url("../img/animals/giraffe.png");
+}
+
+.lion {
+	background-image: url("../img/animals/lion.png");
+}
+
+.cow {
+	background-image: url("../img/animals/cow.png");
+}
+
+.rhino {
+	background-image: url("../img/animals/rhino.png");
+}
+
+.zebra {
+	background-image: url("../img/animals/zebra.png");
 }
 
 /* Header : contrôles */
@@ -73,8 +101,45 @@ header > * {
 	flex-direction: column;
 }
 
-header > * > * {
+header commands > * {
 	flex: 1;
+}
+
+header objectives {
+	flex: 1;
+	flex-direction: row;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header objective {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+header objective > * {
+	margin: auto;
+}
+
+header objective statut, header objective goal {
+	/* display: none; */
+}
+
+header objective animal {
+	display: block;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.5);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: center center;	
+	border-radius: 50px;
+}
+
+header objective.valid animal {
+	background-color: #A7C628;	
 }
 
 /* Article 1 : pièces */
@@ -197,28 +262,4 @@ zone > square {
 	background-size: 75%;
 	box-shadow: 0 0 1px rgba(0, 0, 0.1);
 	background-position: center center;	
-}
-
-square.elephant {
-	background-image: url("../img/animals/elephant.png");
-}
-
-square.giraffe {
-	background-image: url("../img/animals/giraffe.png");
-}
-
-square.lion {
-	background-image: url("../img/animals/lion.png");
-}
-
-square.cow {
-	background-image: url("../img/animals/cow.png");
-}
-
-square.rhino {
-	background-image: url("../img/animals/rhino.png");
-}
-
-square.zebra {
-	background-image: url("../img/animals/zebra.png");
 }

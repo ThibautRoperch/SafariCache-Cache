@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 	<meta charset="UTF-8">
 	<title>CACHE CACHE XD</title>
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/structure.css">
+	<script src="js/problems.js"></script>
 </head>
 
-<body onmousemove="retrieve_mouse_pos(event)">
+<body onload="load_problems()" onmousemove="retrieve_mouse_pos(event)">
 
 	<img class="background" src="img/savane.png"/>
 
 	<header>
 		<commands>
-			<button>Nouveau défi</button>
-			<button>Vérifier solution</button>
+			<button onclick="new_problem()">Nouveau défi</button>
+			<button onclick="check_solution()">Vérifier solution</button>
 		</commands>
 		<objectives>
-			<objective><animal>éléphant</animal><statut></statut> / <goal></goal></objective>
-			<objective><animal>girafe</animal><statut></statut> / <goal></goal></objective>
-			<objective><animal>lion</animal><statut></statut> / <goal></goal></objective>
-			<objective><animal>rhino</animal><statut></statut> / <goal></goal></objective>
-			<objective><animal>zèbre</animal><statut></statut> / <goal></goal></objective>
+			<objective><animal class="elephant"></animal><statut></statut><goal></goal></objective>
+			<objective><animal class="giraffe"></animal><statut></statut><goal></goal></objective>
+			<objective><animal class="lion"></animal><statut></statut><goal></goal></objective>
+			<objective><animal class="rhino"></animal><statut></statut><goal></goal></objective>
+			<objective><animal class="zebra"></animal><statut></statut><goal></goal></objective>
 		</objectives>
 	</header>
 	
-	<section>
+	<section class="hide">
 	
 		<article id="pieces">
 			<pieces>
