@@ -159,7 +159,7 @@ header objective animal {
 	background-position: center center;	
 	overflow: hidden;
 	border-radius: 50px;
-	text-shadow: 0 0 15px black;
+	text-shadow: 0 0 15px black, #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 
 header objective.valid animal {

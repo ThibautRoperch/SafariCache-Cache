@@ -12,10 +12,7 @@ function open_file(file_path) {
             read_file(xhr.responseText);
         } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
             var wait = 100;
-            console.out("Fichier " + file_path + " introuvable ; nouvelle tentative dans " + wait + " ms");
-            setTimeout(function() {
-                open_file(file_path);
-            }, wait);
+            console.out("Fichier " + file_path + " introuvable");
         }
     };
     xhr.open("GET", file_path, true);
@@ -51,4 +48,12 @@ function new_problem() {
     }
 
     document.getElementsByTagName("section")[0].className = "";
+
+    // Actualise le nombre d'animaux cachés par rapport à l'objectif
+    compute_animals();
+
+    // Exécute le moteur et charge la solution
+    // TODO
+    // https://openclassrooms.com/forum/sujet/lancer-cmd-linux-depuis-script-js-94074
 }
+

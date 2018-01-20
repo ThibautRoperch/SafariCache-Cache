@@ -57,7 +57,7 @@ function place(piece) {
         // Ajout de la pièce à l'élément correspondant
         append_piece(piece, overed);
 
-        // Actualise le nombre d'animaux cachés
+        // Actualise le nombre d'animaux cachés par rapport à l'objectif
         compute_animals();
     }, 15);
 }
@@ -73,7 +73,7 @@ function rotate(piece) {
         for (square of piece.getElementsByTagName("square")) square.style.borderStyle = "inset";
     }
 
-    // Actualise le nombre d'animaux cachés
+    // Actualise le nombre d'animaux cachés par rapport à l'objectif
     compute_animals();
 }
 
@@ -404,7 +404,7 @@ function compute_animals() {
         animal.innerHTML = nb_animals[animal_id++];
     }
 
-    // Valide les objectifs validés
+    // Valide les objectifs remplis
     for(objective of document.getElementsByTagName("objectives")[0].getElementsByTagName("objective")) {
         if (objective.getElementsByTagName("statut")[0].innerHTML === objective.getElementsByTagName("animal")[0].innerHTML) {
             objective.className = "valid";
@@ -413,3 +413,4 @@ function compute_animals() {
         }
     }
 }
+
