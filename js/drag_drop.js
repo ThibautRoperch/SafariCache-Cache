@@ -143,7 +143,7 @@ function compute_animals() {
     nb_animals[4] = document.getElementById("safari").querySelectorAll(".zebra").length;
 
     // Pour chaque zone, décrémente les animaux cachés par leur pièce
-    for(zone of document.getElementsByTagName("zones")[0].children) {
+    for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.id === "zone1" && zone.childElementCount > 9) {
             var piece = zone.lastElementChild;
             switch (piece.id) {
@@ -404,13 +404,21 @@ function compute_animals() {
         animal.innerHTML = nb_animals[animal_id++];
     }
 
+    var solution_found = true;
     // Valide les objectifs remplis
     for(objective of document.getElementsByTagName("objectives")[0].getElementsByTagName("objective")) {
         if (objective.getElementsByTagName("statut")[0].innerHTML === objective.getElementsByTagName("animal")[0].innerHTML) {
             objective.className = "valid";
         } else {
             objective.className = "";
+            solution_found = false;
         }
     }
+
+    if (solution_found && check_solution()) {
+        display("GG");
+    }
 }
+
+// https://youtu.be/Ljp-KEDkOaM SKYRIM
 

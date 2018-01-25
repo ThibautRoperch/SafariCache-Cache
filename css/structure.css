@@ -26,10 +26,6 @@ header, article {
 	background: rgba(245, 245, 220, 0.308);
 }
 
-section.hide {
-	display: none;
-}
-
 article {
 	flex: 1;
 	display: flex;
@@ -98,6 +94,11 @@ header {
 header > * {
 	display: flex;
 	flex-direction: column;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header > *:last-child {
+	border-right: 0;
 }
 
 header commands button {
@@ -125,14 +126,14 @@ header commands button:last-child {
 header objectives {
 	flex: 1;
 	flex-direction: row;
-	border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 header objective {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: center;	
+	align-items: center;
+	padding: 10px 0;	
 }
 
 header objective > * {
@@ -148,7 +149,7 @@ header objective animal {
 	width: 60px; /* = height */
 	height: 60px; /* = width */
 	line-height: 60px; /* = height */
-	font-size: 28px;
+	font-size: 32px;
 	color: white;
 	font-weight: bold;
 	font-family: Courier New, Courier, monospace;
@@ -198,7 +199,6 @@ piece:active {
 }
 
 piece > square {
-	/* border-style: outset; */
 	transition: box-shadow .2s ease;
 	background-size: 300%;
 }
