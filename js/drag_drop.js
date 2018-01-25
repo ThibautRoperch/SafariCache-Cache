@@ -276,10 +276,10 @@ function compute_animals() {
                 case "piece1":
                     switch((piece_rotation(piece) % 180) / 90) {
                         case 0:
-                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            nb_animals[0] -= 0; nb_animals[1] -= 2; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
                             break;
                         case 1:
-                            nb_animals[0] -= 0; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
+                            nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 1; nb_animals[3] -= 2; nb_animals[4] -= 1;
                             break;
                     }
                     break;
