@@ -7,13 +7,20 @@
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/structure.css">
 	<script src="js/problems.js"></script>
+	<script src="js/musics.js"></script>
 </head>
 
 <body onload="load_problems()" onmousemove="retrieve_mouse_pos(event)">
 
 	<img class="background" src="img/savane.png"/>
 
+
+	<audio id="audioPlayer" src="music/Theme.mp3" autoplay loop="true"></audio>
+
 	<header>
+			
+		<img class="note" src="img/note.png" onclick="sound()"/>
+		
 		<commands>
 			<button onclick="new_problem()">Nouveau défi</button>
 			<button onclick="check_solution()">Vérifier solution</button>
@@ -136,6 +143,8 @@
 	</section>
 
 </body>
+
+
 
 <html>
 

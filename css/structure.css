@@ -15,6 +15,15 @@ img.background {
 	z-index: -100;
 }
 
+img.note {
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	width: 2%;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
 header, section {
 	display: flex;
 	flex-direction: row;
