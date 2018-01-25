@@ -10,8 +10,8 @@ function open_file(file_path) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
             read_file(xhr.responseText);
+            new_problem();
         } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
-            var wait = 100;
             console.out("Fichier " + file_path + " introuvable");
         }
     };
@@ -53,7 +53,30 @@ function new_problem() {
     compute_animals();
 
     // Exécute le moteur et charge la solution
-    // TODO
-    // https://openclassrooms.com/forum/sujet/lancer-cmd-linux-depuis-script-js-94074
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            console.log(xhr.responseText);
+        } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
+            console.out(":non:");
+        }
+    };
+    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&z=' + defi["zebre"] + '&r=' + defi["rhinoceros"], true);
+    xhr.send();
 }
 
+function check_solution() {
+    var correct_solution = true;
+
+    // Pour chaque zone, si il y a une pièce, la comparer avec la solution
+    for (zone of document.getElementsByTagName("zones")[0].children) {
+        if (zone.childElementCount > 9) {
+            var piece = zone.lastElementChild;
+
+        } else {
+            correct_solution = false;
+        }
+    }
+
+    return correct_solution;
+}

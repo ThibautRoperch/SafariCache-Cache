@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>CACHE CACHE XD</title>
+	<title>Cache-cache</title>
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/structure.css">
 	<script src="js/problems.js"></script>
 	<script src="js/musics.js"></script>
+	<script src="js/popup.js"></script>
 </head>
 
 <body onload="load_problems()" onmousemove="retrieve_mouse_pos(event)">
@@ -23,7 +24,6 @@
 		
 		<commands>
 			<button onclick="new_problem()">Nouveau défi</button>
-			<button onclick="check_solution()">Vérifier solution</button>
 		</commands>
 		<objectives>
 			<objective><animal class="elephant"></animal><statut></statut></objective>
@@ -32,9 +32,13 @@
 			<objective><animal class="rhino"></animal><statut></statut></objective>
 			<objective><animal class="zebra"></animal><statut></statut></objective>
 		</objectives>
+
+		<commands>
+			<button onclick="give_clue()">Indice</button>
+		</commands>
 	</header>
 	
-	<section class="hide">
+	<section>
 	
 		<article id="pieces">
 			<pieces>

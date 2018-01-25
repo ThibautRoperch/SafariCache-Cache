@@ -3,3 +3,6 @@
 	padding: 0;
 }
 
+*::-moz-selection{
+	background-color: transparent;
+}
