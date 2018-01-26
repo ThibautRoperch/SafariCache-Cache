@@ -62,7 +62,6 @@ function new_problem() {
     };
     xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
     xhr.send();
-
 }
 
 function check_solution() {
@@ -78,13 +77,13 @@ function check_solution() {
     for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.childElementCount > 9) {
             var piece = zone.lastElementChild;
-            var piece_id = piece.id.substr(4); // indice de la pièce (1 à 4)
+            var piece_id = piece.id.substr(5); // indice de la pièce (1 à 4)
             var zone_id = zone.id + "_"; // pour faire comme dans le JSON
 
             if (zone_id === Object.keys(solution)[parseInt(piece_id) - 1]) { // si l'élément en [indice piece - 1] a pour clef zone_id_, c'est qu'elle est au bon endroit
-                console.log(zone_id + " " + piece_id + " ok");
+                // console.log(zone_id + " " + piece_id + " ok");
                 if (((piece_rotation(piece) % 360) / 90) + 1 == solution[zone_id]) {
-                    console.log("et bien tournée");
+                    // console.log("et bien tournée");
                 } else {
                     correct_solution = false;
                 }
@@ -122,7 +121,7 @@ function give_clue() {
     for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.childElementCount > 9) {
             var piece = zone.lastElementChild;
-            var piece_id = piece.id.substr(4); // indice de la piece (1 à 4)
+            var piece_id = piece.id.substr(5); // indice de la piece (1 à 4)
             var zone_id = zone.id + "_"; // pour faire comme dans le JSON
 
             if (zone_id === Object.keys(solution)[parseInt(piece_id) - 1]) { // si l'élément en [indice piece - 1] a pour clef zone_id_, c'est qu'elle est au bon endroit

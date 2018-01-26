@@ -1,22 +1,12 @@
 
-function display(message) {
-    document.getElementById("popup").innerHTML=message;
-}
+let popup = document.getElementById("popup");
 
 function display_popup(message) {
     alert(message);
-    /*
-    documen...getpopup.childNode[0].innerHTML = message;
-    <div id="popup" class="hidden">
-      <div>
-        // ici y'aura le message
-      </div>
-      <button onclick="hide_popup()">OK</button>
-    </div>
-    */
-    // affecter à la popup la class "displayed"
+    // popup.childNodes[0].innerHTML = message;
+    // popup.className = "displayed";
 }
 
 function hide_popup() {
-    // cacher la popup en lui affectant le style "hidden"
+    // popup.class = "hidden";
 }

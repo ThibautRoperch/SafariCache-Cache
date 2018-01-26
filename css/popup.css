@@ -6,16 +6,13 @@ div#popup {
     top: 50%;
     margin-top: -100px;
     margin-left: -100px; 
+    transition: all 0.4s ease-in;
 }
 
-/*
-#popup {
-    transition: all 0.4s ease-in;
-
-#popup.displayed {
+div#popup.displayed {
     top: 50%;
+}
 
-#popup.hidden {
+div#popup.hidden {
     top: -100%;    
-
-*/
+}

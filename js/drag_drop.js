@@ -427,9 +427,6 @@ function compute_animals() {
     }
     check_solution();
     if (solution_found && check_solution()) {
-        display_popup("GG");
+        display_popup("Bravo ! Vous avez réussi ce défi ");
     }
 }
-
-// https://youtu.be/Ljp-KEDkOaM SKYRIM
-
