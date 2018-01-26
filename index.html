@@ -11,7 +11,7 @@
 	<script src="js/musics.js"></script>
 </head>
 
-<body onload="load_problems()" onmousemove="retrieve_mouse_pos(event)">
+<body onload="load_problems(), load_solutions()" onmousemove="retrieve_mouse_pos(event)">
 
 	<img class="background" src="img/savane.png"/>
 
@@ -34,7 +34,7 @@
 		</objectives>
 
 		<commands>
-			<button onclick="solve_problem()">Résoudre</button>
+			<button onclick="solve_problem()">Résolution auto</button>
 		</commands>
 	</header>
 	

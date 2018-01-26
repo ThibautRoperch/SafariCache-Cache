@@ -1029,6 +1029,13 @@
 		 "zebre": 0
 	},
 	{
+		 "elephant": 3,
+		 "gazelle": 5,
+		 "lion": 5,
+		 "rhinoceros": 4,
+		 "zebre": 4
+	},
+	{
 		 "elephant": 4,
 		 "gazelle": 0,
 		 "lion": 0,
@@ -1113,6 +1120,20 @@
 		 "zebre": 0
 	},
 	{
+		 "elephant": 4,
+		 "gazelle": 4,
+		 "lion": 5,
+		 "rhinoceros": 0,
+		 "zebre": 5
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 4,
+		 "lion": 5,
+		 "rhinoceros": 3,
+		 "zebre": 2
+	},
+	{
 		 "elephant": 5,
 		 "gazelle": 0,
 		 "lion": 0,
@@ -1181,5 +1202,12 @@
 		 "lion": 1,
 		 "rhinoceros": 1,
 		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 4,
+		 "lion": 1,
+		 "rhinoceros": 2,
+		 "zebre": 3
 	}
 ]

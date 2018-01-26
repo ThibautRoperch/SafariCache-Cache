@@ -4,24 +4,29 @@ let solutions = new Array(); // liste des solutions du problème en cours
 let solution = new Array(); // solution unique du problème en cours
 
 function load_problems() {
-    open_file("moteur/problemes.json");
+    open_file("moteur/problemes.json", new_problem);
 }
 
-function open_file(file_path) {
+function load_solutions() {
+    open_file("moteur/solutions.json", function(responseText) { solutions = JSON.parse(responseText); });
+}
+
+function open_file(file_path, callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-            problems = JSON.parse(xhr.responseText);
-            new_problem();
+            callback(xhr.responseText);
         } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
-            console.out("Fichier " + file_path + " introuvable");
+            console.log("Fichier " + file_path + " introuvable");
         }
     };
     xhr.open("GET", file_path, true);
     xhr.send();
 }
 
-function new_problem() {
+function new_problem(responseText) {
+    problems = JSON.parse(responseText);
+
     var defi = problems[Math.round(Math.random() * (problems.length - 1))];
 
     // Récupère et affiche l'occurence objectif de chaque animal

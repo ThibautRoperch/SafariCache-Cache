@@ -51,6 +51,7 @@ piece, zone { /* changer ces tailles a un impact sur zones */
 	display: flex;
 	flex-wrap: wrap;
 	width: 225px; /* 3 * (square width + 2 * square border width) */
+	min-width: 225px; /* width */
 	height: 225px; /* 3 * (square height + 2 * square border width) */
 }
 
