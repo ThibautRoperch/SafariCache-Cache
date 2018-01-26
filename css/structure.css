@@ -312,6 +312,10 @@ zone > square {
 	background-position: center center;	
 }
 
+zone piece:hover {
+	opacity: 0.4;
+}
+
 /* Footer, crédits */
 
 footer {
