@@ -116,7 +116,7 @@ header commands button {
 	flex: 1;
 	display: inline-block;
 	width: 175px;
-	line-height: 42px;
+	line-height: 1.5em;
 	border: 0px;
 	color: rgba(0, 0, 0, 0.6);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);

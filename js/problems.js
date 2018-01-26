@@ -27,7 +27,8 @@ function open_file(file_path, callback) {
 function new_problem(responseText) {
     problems = JSON.parse(responseText);
 
-    var defi = problems[Math.round(Math.random() * (problems.length - 1))];
+    var rand_index = Math.round(Math.random() * (problems.length - 1));
+    var defi = problems[rand_index];
 
     // Récupère et affiche l'occurence objectif de chaque animal
     for (animal in defi) {
@@ -56,17 +57,20 @@ function new_problem(responseText) {
     compute_animals();
 
     // Exécute le moteur et charge la solution
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-            solutions = JSON.parse(xhr.responseText);
-            solution = solutions[0];
-        } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
-            console.log("Fichier controleur.php inexistant");
-        }
-    };
-    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
-    xhr.send();
+    // var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function() {
+    //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    //         solutions = JSON.parse(xhr.responseText);
+    //         solution = solutions[0];
+    //     } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
+    //         console.log("Fichier controleur.php inexistant");
+    //     }
+    // };
+    // xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
+    // xhr.send();
+
+    // Solution déjà chargée au format JSON
+    solution = solutions[rand_index];
 }
 
 function check_solution() {

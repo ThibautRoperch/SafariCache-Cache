@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
 	int somme_lion = 6;
 	int somme_rhinoceros = 5;
 	int somme_zebre = 5;
-	
+
 	/** Parcours des problemes **/
 	for (int e = 0; e <= somme_elephant; ++e) {
 		for (int g = 0; g <= somme_gazelle; ++g) {
