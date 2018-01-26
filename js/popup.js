@@ -1,4 +1,4 @@
 
 function display(message) {
-    alert(message);
+    document.getElementById("popup").innerHTML=message;
 }

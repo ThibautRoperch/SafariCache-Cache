@@ -1,0 +1,9 @@
+div#popup {
+    position: absolute;
+    width:200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px; 
+}
