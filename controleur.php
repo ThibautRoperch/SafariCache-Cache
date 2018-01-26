@@ -32,9 +32,9 @@ if (isset($_GET["e"]) && isset($_GET["g"]) && isset($_GET["l"]) && isset($_GET["
                         $result .= ",{";
                     }
                     $reading_sol = true;
-                    $result .= "\"piece$zone[0]_\" : $zone[1]";
+                    $result .= "\"zone$zone[0]_\" : $zone[1]";
                 } else {
-                    $result .= ",\"piece$zone[0]_\" : $zone[1]";
+                    $result .= ",\"zone$zone[0]_\" : $zone[1]";
                 }
             }
         }

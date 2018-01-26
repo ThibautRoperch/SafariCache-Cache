@@ -101,6 +101,9 @@ function reset_pieces() {
         piece.style.transform = "";
         append_piece(piece, document.getElementsByTagName("pieces")[0]);
     }
+
+    // Actualise le nombre d'animaux cachés par rapport à l'objectif
+    compute_animals();
 }
 
 // Récupère les valeurs de la translation de la pièce

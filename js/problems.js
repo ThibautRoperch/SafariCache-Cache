@@ -60,7 +60,7 @@ function new_problem() {
             console.log("Fichier controleur.php inexistant");
         }
     };
-    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&z=' + defi["zebre"] + '&r=' + defi["rhinoceros"], true);
+    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
     xhr.send();
 
 }
@@ -68,20 +68,26 @@ function new_problem() {
 function check_solution() {
     var correct_solution = true;
 
+    /*
+        piece1 : zone_id_ rotation
+        piece2 : zone_id_ rotation
+        ...  4
+    */
+
     // Pour chaque zone, si il y a une pièce, la comparer avec la solution
     for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.childElementCount > 9) {
-            var zone_id = zone.id.substr(4); // indice de la zone (1 à 4)
             var piece = zone.lastElementChild;
-            var piece_id = piece.id + "_"; // pour faire comme dans le JSON
+            var piece_id = piece.id.substr(4); // indice de la pièce (1 à 4)
+            var zone_id = zone.id + "_"; // pour faire comme dans le JSON
 
-            if (piece_id === Object.keys(solution)[parseInt(zone_id) - 1]) { // si l'élément en [indice zone - 1] a pour clef piece_id_, c'est qu'elle est au bon endroit
+            if (zone_id === Object.keys(solution)[parseInt(piece_id) - 1]) { // si l'élément en [indice piece - 1] a pour clef zone_id_, c'est qu'elle est au bon endroit
                 console.log(zone_id + " " + piece_id + " ok");
-                if (((piece_rotation(piece) % 360) / 90) + 1 == solution[piece_id]) {
+                if (((piece_rotation(piece) % 360) / 90) + 1 == solution[zone_id]) {
                     console.log("et bien tournée");
                 } else {
                     correct_solution = false;
-                }   
+                }
             } else {
                 correct_solution = false;
             }
@@ -96,27 +102,31 @@ function check_solution() {
 function solve_problem() {
     reset_pieces();
 
-    // Pour chaque zone de la solution, y placer la pièce et la tourner
-    var zone_id = 0;
-    for (zone in solution) {
-        var piece_id = zone.substr(0, zone.length - 1); // id de la pièce
-        var piece = document.getElementById(piece_id);
-        append_piece(piece, document.getElementsByTagName("zones")[0].getElementsByTagName("zone")[zone_id]);
-        piece.style.transform = "rotate(" + (solution[zone] - 1) * 90 + "deg)";
-        zone_id++;
+    // Pour chaque pièce de la solution, la placer dans sa zone et la tourner
+    var piece_id = 1;
+    for (piece in solution) {
+        var zone_id = piece.substr(0, piece.length - 1); // id de la zone        
+        var piece_dom = document.getElementById("piece" + piece_id);
+        var zone = document.getElementById(zone_id);
+        append_piece(piece_dom, zone);
+        piece_dom.style.transform = "translate(0, 0) rotate(" + (solution[piece] - 1) * 90 + "deg)";
+        piece_id++;
     }
+
+    // Actualise le nombre d'animaux cachés par rapport à l'objectif
+    compute_animals();
 }
 
 function give_clue() {
     // Pour chaque zone, si il y a une pièce, la comparer avec la solution
     for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.childElementCount > 9) {
-            var zone_id = zone.id.substr(4); // indice de la zone (1 à 4)
             var piece = zone.lastElementChild;
-            var piece_id = piece.id + "_"; // pour faire comme dans le JSON
+            var piece_id = piece.id.substr(4); // indice de la piece (1 à 4)
+            var zone_id = zone.id + "_"; // pour faire comme dans le JSON
 
-            if (piece_id === Object.keys(solution)[parseInt(zone_id) - 1]) { // si l'élément en [indice zone - 1] a pour clef piece_id_, c'est qu'elle est au bon endroit
-                if ((piece_rotation(piece) / 90) + 1 == solution[piece_id]) {
+            if (zone_id === Object.keys(solution)[parseInt(piece_id) - 1]) { // si l'élément en [indice piece - 1] a pour clef zone_id_, c'est qu'elle est au bon endroit
+                if (((piece_rotation(piece) % 360) / 90) + 1 == solution[zone_id]) {
                     piece.style.background = "rgba(0, 255, 0, 0.5)";
                 } else {
                     piece.style.background = "rgba(255, 165, 0, 0.5)";
