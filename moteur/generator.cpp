@@ -126,7 +126,7 @@ int main(int argc, char** argv) {
 		fichier_sol << "\t\t \"piece" << sol->piece1[0] << "_\": " << sol->piece1[1] << "," << endl;
 		fichier_sol << "\t\t \"piece" << sol->piece2[0] << "_\": " << sol->piece2[1] << "," << endl;
 		fichier_sol << "\t\t \"piece" << sol->piece3[0] << "_\": " << sol->piece3[1] << "," << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece4[0] << "_\": " << sol->piece4[1] << "," << endl;
+		fichier_sol << "\t\t \"piece" << sol->piece4[0] << "_\": " << sol->piece4[1] << "" << endl;
 		fichier_sol << "\t}";
 		if (i < solutions.size() - 1) {
 			fichier_sol << ",";
