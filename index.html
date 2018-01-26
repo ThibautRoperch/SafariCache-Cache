@@ -34,13 +34,14 @@
 		</objectives>
 
 		<commands>
-			<button onclick="give_clue()">Indice</button>
+			<button onclick="solve_problem()">Résoudre</button>
 		</commands>
 	</header>
 	
 	<section>
 	
 		<article id="pieces">
+			<div class="icone" onclick="reset_pieces()">&#x2B6F;</div>
 			<pieces>
 				<piece id="piece1" class="draggable">
 					<square></square>
@@ -93,6 +94,7 @@
 		</article>
 
 		<article id="safari">
+			<div class="icone" onclick="give_clue()">&#128161;</div>
 			<zones>
 				<zone id="zone1" class="dropper">
 					<square class="elephant"></square>
@@ -146,9 +148,11 @@
 
 	</section>
 
+	<footer>
+		Pierre GRANIER--RICHARD, Maxime LEBLANC, Thibaut ROPERCH - Université d'Angers, M2 Informatique - 2017/2018
+	</footer>
+
 </body>
-
-
 
 <html>
 

@@ -8,13 +8,13 @@ let overed = null; // dropper survolé
 // Récupération des éléments .draggables et .droppers et ajout des events correspondants
 
 var draggables = document.querySelectorAll(".draggable");
-for(element of draggables) {
+for (element of draggables) {
     element.onmousedown = function() { mouse_pos_previous = mouse_pos_actual; dragging = true; move(this); };
-    element.onmouseup = function() { if (duration < 50) rotate(this); else { place(this); this.style.visibility = "hidden"; } dragging = false; duration = 0; };
+    element.onmouseup = function() { if (duration < 115) rotate(this); else { place(this); this.style.visibility = "hidden"; } dragging = false; duration = 0; };
 }
 
 var droppers = document.querySelectorAll(".dropper");
-for(element of droppers) {
+for (element of droppers) {
     element.onmouseover = function() { overed = this; };
     element.onmouseout = function() { overed = null; };
 }
@@ -38,7 +38,7 @@ function move(piece) {
     setTimeout(function() {
         if (dragging) move(piece);
         duration += 5;
-    }, 5);
+    }, 0);
 }
 
 // Placement de la pièce dans l'élement dropper survolé, null autrement
@@ -93,6 +93,14 @@ function append_piece(piece, destination) {
     }
 
     destination.appendChild(piece);
+}
+
+function reset_pieces() {
+    for (var i = 1; i <= document.querySelectorAll("piece").length; ++i) {
+        var piece = document.getElementById("piece" + i);
+        piece.style.transform = "";
+        append_piece(piece, document.getElementsByTagName("pieces")[0]);
+    }
 }
 
 // Récupère les valeurs de la translation de la pièce
@@ -414,9 +422,9 @@ function compute_animals() {
             solution_found = false;
         }
     }
-
+    check_solution();
     if (solution_found && check_solution()) {
-        display("GG");
+        display_popup("GG");
     }
 }
 
