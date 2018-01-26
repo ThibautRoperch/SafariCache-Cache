@@ -7,3 +7,15 @@ div#popup {
     margin-top: -100px;
     margin-left: -100px; 
 }
+
+/*
+#popup {
+    transition: all 0.4s ease-in;
+
+#popup.displayed {
+    top: 50%;
+
+#popup.hidden {
+    top: -100%;    
+
+*/
