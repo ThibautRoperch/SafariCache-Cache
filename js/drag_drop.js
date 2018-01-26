@@ -425,8 +425,9 @@ function compute_animals() {
             solution_found = false;
         }
     }
-    check_solution();
+    
     if (solution_found && check_solution()) {
-        display_popup("Bravo ! Vous avez réussi ce défi ");
+        play_victory();
+        display_popup("Bravo !<br>Vous avez réussi ce défi");
     }
 }

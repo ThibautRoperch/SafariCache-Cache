@@ -6,21 +6,26 @@
 	<title>Cache-cache</title>
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/structure.css">
+	<link rel="stylesheet" href="css/skins.css">
 	<link rel="stylesheet" href="css/popup.css">	
 	<script src="js/problems.js"></script>
 	<script src="js/musics.js"></script>
+	<script src="js/skins.js"></script>
 </head>
 
-<body onload="load_problems(), load_solutions()" onmousemove="retrieve_mouse_pos(event)">
+<body onload="load_problems(), load_solutions()" class="classic" onmousemove="retrieve_mouse_pos(event)">
 
-	<img class="background" src="img/savane.png"/>
-
+	<background></background>
 
 	<audio id="audioPlayer" src="music/Theme.mp3" autoplay loop="true"></audio>
+	
+	<aside>
+		<img class="selected" onclick="change_skin(this, 'classic')" src="img/animals/lion.png" />
+		<img onclick="change_skin(this, 'lol')" src="https://media.lolusercontent.com/api/embedly/1/image/resize?url=http%3A%2F%2Fimgur.com%2FxNLs83T.png&key=a45e967db0914c7fb472fd4381e6c85b&width=425" />
+	</aside>
 
 	<header>
-			
-		<img class="note" src="img/note.png" onclick="sound()"/>
+		<img class="note" src="img/note.png" onclick="sound()" />
 		
 		<commands>
 			<button onclick="new_problem()">Nouveau défi</button>

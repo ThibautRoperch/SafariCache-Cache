@@ -1,3 +1,4 @@
+
 function sound() {
     var player = document.querySelector('#audioPlayer');
 
@@ -10,5 +11,8 @@ function sound() {
         player.pause();	
         note.src="img/note_mute.png"
     }
-    
+}
+
+function play_victory() {
+    // TODO
 }

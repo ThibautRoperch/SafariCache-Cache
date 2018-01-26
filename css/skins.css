@@ -1,0 +1,105 @@
+
+/* Classic (par défaut) */
+
+body.classic background {
+    background-image: url("../img/animals/savane.png");
+	filter: blur(4px);
+}
+
+animal {
+    background-size: 70%;
+}
+
+.elephant {
+	background-image: url("../img/animals/elephant.png");
+}
+
+.giraffe {
+	background-image: url("../img/animals/giraffe.png");
+}
+
+.lion {
+	background-image: url("../img/animals/lion.png");
+}
+
+.rhino {
+	background-image: url("../img/animals/rhino.png");
+}
+
+.zebra {
+	background-image: url("../img/animals/zebra.png");
+}
+
+piece#piece1 square {
+	background-image: url("../img/jungle/jungle1.jpeg");
+}
+
+piece#piece2 square {	
+	background-image: url("../img/jungle/jungle2.jpeg");
+}
+
+piece#piece3 square {	
+	background-image: url("../img/jungle/jungle3.jpeg");
+}
+
+piece#piece4 square {	
+	background-image: url("../img/jungle/jungle4.jpeg");
+}
+
+zones {
+	background: #A7C628;
+	border-color: #A7C628;
+}
+
+zones zone {
+	border-color: #A7C628;
+}
+
+piece square, zone > square {
+	background-color: #8EA823;
+}
+
+/* LoL */
+
+body.lol background {
+    background-image: url("https://am-a.akamaihd.net/image?f=https%3A%2F%2Funiverse-meeps.leagueoflegends.com%2Fv1%2Fassets%2Fimages%2Ffactions%2Fimage-gallery%2Fdemacia-templelightbringers.jpg");
+	filter: blur(0px);
+    opacity: 0.3;
+}
+
+body.lol animal {
+	background-size: 100%;
+}
+
+body.lol .elephant {
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Zoe.png");
+}
+
+body.lol .giraffe {
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Xayah.png");
+}
+
+body.lol .lion {
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Ornn.png");
+}
+
+body.lol .rhino {
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Galio.png");
+}
+
+body.lol .zebra {
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Annie.png");
+}
+
+body.lol zones {
+	background: rgb(18, 84, 128);
+	border-color: rgb(18, 84, 128);
+}
+
+body.lol zones zone {
+	border-color: rgb(18, 84, 128);
+}
+
+body.lol piece square, body.lol zone > square {
+	background-color: rgb(15, 61, 94);
+}
