@@ -151,10 +151,4 @@ function give_clue() {
             }
         }
     }
-
-    setTimeout(function() {
-        for (piece of document.querySelectorAll("piece")) {
-            piece.style.background = "transparent";
-        }
-    }, 5000);
 }

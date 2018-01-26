@@ -28,6 +28,12 @@ function retrieve_mouse_pos(event) {
 
 // Déplacement de la pièce en suivant le cuseur
 function move(piece) {
+
+    // Enlever l'effet de give_clue
+    for (p of document.querySelectorAll("piece")) {
+        p.style.background = "transparent";
+    }
+
     var piece_pos = piece_translation(piece);
 
     var mouse_pos_diff = [mouse_pos_actual[0] - mouse_pos_previous[0], mouse_pos_actual[1] - mouse_pos_previous[1]]; // Recalcul de la différence entre la pos actuelle et la pos précédente

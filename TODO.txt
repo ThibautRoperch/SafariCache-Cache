@@ -2,12 +2,8 @@ Modéliser le problème avec MiniZinc
 Interface graphique : langage au choix
 Langage de backend : Choco (Java), OR-Tools (Python, C#, Java), GECODE (C++)
 
-Pour les + avancés :
-Interface qui guide l'utilisateur (enlève les pieces mal placées par rapport à la solution)
-
-https://openclassrooms.com/forum/sujet/lancer-cmd-linux-depuis-script-js-94074
-https://course.oc-static.com/ftp-tutos/cours/javascript/part5/chap5/ex9.html
-
 ---
 
-L'interface dit "la piece est mal placée" "dans la mauvaise rotation"
+Thème logiciels (firefox, ...)
+Thème langages
+Triche possible, faire qlqchose contre ca ? (enlever un point, ...)
