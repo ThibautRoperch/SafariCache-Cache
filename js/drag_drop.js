@@ -275,7 +275,7 @@ function compute_animals() {
                             nb_animals[0] -= 1; nb_animals[1] -= 0; nb_animals[2] -= 2; nb_animals[3] -= 0; nb_animals[4] -= 1;
                             break;
                         case 3:
-                            nb_animals[0] -= 1; nb_animals[1] -= 1; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
+                            nb_animals[0] -= 1; nb_animals[1] -= 2; nb_animals[2] -= 0; nb_animals[3] -= 1; nb_animals[4] -= 1;
                             break;
                     }
                     break;
@@ -428,6 +428,6 @@ function compute_animals() {
     
     if (solution_found && check_solution()) {
         play_victory();
-        display_popup("Bravo !<br>Vous avez réussi ce défi");
+        display_popup("👏", "Vous avez réussi ce défi, vous gagnez un point !");
     }
 }

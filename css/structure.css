@@ -189,13 +189,11 @@ header objective.valid animal {
 	background-color: #A7C628;	
 }
 
-/* Article 1 : pièces */
-
 .icone {
 	position: absolute;
 	margin-left: -25px;
 	margin-top: -25px;
-	font-size: 32px;
+	font-size: 36px;
 	opacity: 1;
 	color: rgb(46, 45, 45);
 	text-shadow: 0 0 1px black;
@@ -208,6 +206,8 @@ header objective.valid animal {
 	opacity: 0.9;
 	transform: rotate(-360deg);
 }
+
+/* Article 1 : pièces */
 
 pieces {
 	display: flex;

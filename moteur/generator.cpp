@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
 								++nombre_de_lignes;
 								switch (nombre_de_lignes) {
 									case 1:
-										sol->piece1[0] = ligne[0]; // Attention : les indices des pièces et des rotations sont limitées à 9
+										sol->piece1[0] = ligne[0]; // Attention : les indices des pièces et des rotations sont limités à 9
 										sol->piece1[1] = ligne[2];
 										break;
 									case 2:
@@ -123,10 +123,10 @@ int main(int argc, char** argv) {
 	for (unsigned int i = 0; i < solutions.size(); ++i) {
 		solution* sol = solutions[i];
 		fichier_sol << "\t{" << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece1[0] << "_\": " << sol->piece1[1] << "," << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece2[0] << "_\": " << sol->piece2[1] << "," << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece3[0] << "_\": " << sol->piece3[1] << "," << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece4[0] << "_\": " << sol->piece4[1] << endl;
+		fichier_sol << "\t\t \"zone" << sol->piece1[0] << "_\": " << sol->piece1[1] << "," << endl;
+		fichier_sol << "\t\t \"zone" << sol->piece2[0] << "_\": " << sol->piece2[1] << "," << endl;
+		fichier_sol << "\t\t \"zone" << sol->piece3[0] << "_\": " << sol->piece3[1] << "," << endl;
+		fichier_sol << "\t\t \"zone" << sol->piece4[0] << "_\": " << sol->piece4[1] << endl;
 		fichier_sol << "\t}";
 		if (i < solutions.size() - 1) {
 			fichier_sol << ",";

@@ -28,7 +28,7 @@
 		<img class="note" src="img/note.png" onclick="sound()" />
 		
 		<commands>
-			<button onclick="new_problem()">Nouveau défi</button>
+			<button onclick="new_problem()">Passer ce défi</button>
 		</commands>
 		<objectives>
 			<objective><animal class="elephant"></animal><statut></statut></objective>
@@ -154,11 +154,10 @@
 	</section>
 
 	<div id="popup" class="hidden">
+		<illustration></illustration>
 		<div></div>
-		<button onclick="hide_popup()">OK</button>
+		<button onclick="new_problem(), hide_popup()">Nouveau défi</button>
 	</div>
-	
-</body>
 
 	<footer>
 		Pierre GRANIER--RICHARD, Maxime LEBLANC, Thibaut ROPERCH - Université d'Angers, M2 Informatique - 2017/2018
