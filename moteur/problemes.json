@@ -178,7 +178,182 @@
 		 "elephant": 2,
 		 "gazelle": 2,
 		 "lion": 2,
+		 "rhinoceros": 2,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 3,
+		 "gazelle": 3,
+		 "lion": 0,
 		 "rhinoceros": 0,
-		 "zebre": 2
+		 "zebre": 1
+	},
+	{
+		 "elephant": 3,
+		 "gazelle": 3,
+		 "lion": 1,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 3,
+		 "gazelle": 3,
+		 "lion": 2,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 0,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 0,
+		 "lion": 0,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 0,
+		 "lion": 3,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 0,
+		 "lion": 3,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 1,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 1,
+		 "lion": 1,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 1,
+		 "lion": 2,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 1,
+		 "lion": 2,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 2,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 2,
+		 "lion": 1,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 3,
+		 "lion": 0,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 4,
+		 "gazelle": 3,
+		 "lion": 1,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 1,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 1,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 2,
+		 "rhinoceros": 0,
+		 "zebre": 1
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 0,
+		 "lion": 2,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 1,
+		 "lion": 0,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 1,
+		 "lion": 0,
+		 "rhinoceros": 1,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 1,
+		 "lion": 1,
+		 "rhinoceros": 0,
+		 "zebre": 0
+	},
+	{
+		 "elephant": 5,
+		 "gazelle": 1,
+		 "lion": 1,
+		 "rhinoceros": 1,
+		 "zebre": 0
 	}
 ]

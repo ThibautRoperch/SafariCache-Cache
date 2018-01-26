@@ -1,5 +1,6 @@
 moteur/minizinc
-*.sol
-*.fzn
-*.ozn
-*.ozb
+moteur/generator.exe
+moteur/*.sol
+moteur/*.fzn
+moteur/*.ozn
+moteur/*.ozb
