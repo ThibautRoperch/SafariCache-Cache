@@ -107,7 +107,7 @@ int main(int argc, char** argv) {
 		fichier_prob << "\t\t \"gazelle\": " << prob->g << "," << endl;
 		fichier_prob << "\t\t \"lion\": " << prob->l << "," << endl;
 		fichier_prob << "\t\t \"rhinoceros\": " << prob->r << "," << endl;
-		fichier_prob << "\t\t \"zebre\": " << prob->z << "" << endl;
+		fichier_prob << "\t\t \"zebre\": " << prob->z << endl;
 		fichier_prob << "\t}";
 		if (i < problemes.size() - 1) {
 			fichier_prob << ",";
@@ -126,7 +126,7 @@ int main(int argc, char** argv) {
 		fichier_sol << "\t\t \"piece" << sol->piece1[0] << "_\": " << sol->piece1[1] << "," << endl;
 		fichier_sol << "\t\t \"piece" << sol->piece2[0] << "_\": " << sol->piece2[1] << "," << endl;
 		fichier_sol << "\t\t \"piece" << sol->piece3[0] << "_\": " << sol->piece3[1] << "," << endl;
-		fichier_sol << "\t\t \"piece" << sol->piece4[0] << "_\": " << sol->piece4[1] << "" << endl;
+		fichier_sol << "\t\t \"piece" << sol->piece4[0] << "_\": " << sol->piece4[1] << endl;
 		fichier_sol << "\t}";
 		if (i < solutions.size() - 1) {
 			fichier_sol << ",";
