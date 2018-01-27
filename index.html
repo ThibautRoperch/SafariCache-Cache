@@ -11,9 +11,10 @@
 	<script src="js/problems.js"></script>
 	<script src="js/musics.js"></script>
 	<script src="js/skins.js"></script>
+	<script src="js/time.js"></script>
 </head>
 
-<body onload="load_problems(), load_solutions()" class="classic" onmousemove="retrieve_mouse_pos(event)">
+<body onload="display_chrono(), load_problems(), load_solutions()" class="classic" onmousemove="retrieve_mouse_pos(event)">
 
 	<background></background>
 
@@ -161,11 +162,13 @@
 
 	</section>
 
-	<div id="popup" class="hidden">
-		<illustration></illustration>
-		<div></div>
-		<button onclick="new_problem(), hide_popup()">Nouveau défi</button>
-	</div>
+	<layer class="hidden">
+		<div id="popup">
+			<illustration></illustration>
+			<div></div>
+			<button onclick="new_problem(), hide_popup()">Nouveau défi</button>
+		</div>
+	</layer>
 
 	<footer>
 		Pierre GRANIER--RICHARD, Maxime LEBLANC, Thibaut ROPERCH - Université d'Angers, M2 Informatique - 2017/2018

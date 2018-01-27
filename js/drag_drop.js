@@ -28,6 +28,8 @@ function retrieve_mouse_pos(event) {
 
 // Déplacement de la pièce en suivant le cuseur
 function move(piece) {
+    // Démarrer le chronomètre si c'est pas déjà fait
+    start_chrono();
 
     // Enlever l'effet de give_clue
     for (p of document.querySelectorAll("piece")) {
@@ -433,7 +435,25 @@ function compute_animals() {
     }
     
     if (solution_found && check_solution()) {
-        play_victory();
-        display_popup("👏", "Vous avez réussi ce défi !");
+        stop_chrono();
+
+        if (!auto_resolution) {
+            play_victory();
+
+            var record_msg = "";
+            if (!records[current_index]) {
+                records[current_index] = time;
+                record_msg = "<br><br>Vous être le premier à avoir réussi ce défi !";
+                document.getElementsByTagName("best")[0].innerHTML = "Record : " + sec_to_minsec(time);
+            } else if(time < records[current_index]) {
+                records[current_index] = time;
+                record_msg = "<br><br>Vous avez battu le meilleur score !";
+                document.getElementsByTagName("best")[0].innerHTML = "Record : " + sec_to_minsec(time);
+            }
+
+            display_popup("👏", "Vous avez réussi ce défi en " + document.getElementsByTagName("chrono")[0].innerHTML + " ! " + record_msg);
+        } else {
+            auto_resolution = false;
+        }
     }
 }

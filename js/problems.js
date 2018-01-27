@@ -1,8 +1,9 @@
 
 let problems = new Array(); // liste des problèmes
 let solutions = new Array(); // liste des solutions
-let scores = new Array(); // liste des meilleurs scores
+let records = new Array(); // liste des meilleurs scores
 let current_index = -1; // indice du problème/solution/score en cours
+let auto_resolution = false; // le problème en cours est résolu automatiquement
 
 function load_problems() {
     open_file("moteur/problemes.json", load_solutions);
@@ -33,7 +34,8 @@ function open_file(file_path, callback) {
 
 function new_problem() {
     reset_pieces();
-    
+    reset_chrono();
+
     current_index = Math.round(Math.random() * (problems.length - 1));
     var defi = problems[current_index];
 
@@ -75,6 +77,10 @@ function new_problem() {
     // };
     // xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
     // xhr.send();
+
+    // Affiche le meilleur score
+    var best = records[current_index];
+    document.getElementsByTagName("best")[0].innerHTML = (best != undefined) ? "Record : " + sec_to_minsec(best) : "Pas de meilleur score";
 }
 
 function check_solution() {
@@ -115,6 +121,7 @@ function check_solution() {
 
 function solve_problem() {
     var solution = solutions[current_index];
+    auto_resolution = true;
 
     // Pour chaque pièce de la solution, la placer dans sa zone et la tourner
     var piece_id = 1;
@@ -154,4 +161,6 @@ function give_clue() {
             }
         }
     }
+
+    add_chrono(20);
 }
