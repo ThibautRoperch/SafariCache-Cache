@@ -47,16 +47,16 @@ piece#piece4 square {
 }
 
 zones {
-	background: #A7C628;
-	border-color: #A7C628;
+	background: #A7C628; /* = border-color */
+	border-color: #A7C628; /* = background */
 }
 
 zones zone {
-	border-color: #A7C628;
+	border-color: #A7C628; /* = zones background */
 }
 
 piece square, zone > square {
-	background-color: #8EA823;
+	background-color: #8EA823; /* = zones background (darker) */
 }
 
 /* LoL */
@@ -92,14 +92,14 @@ body.lol .zebra {
 }
 
 body.lol zones {
-	background: rgb(18, 84, 128);
-	border-color: rgb(18, 84, 128);
+	background: rgb(18, 84, 128); /* = border-color */
+	border-color: rgb(18, 84, 128); /* = background */
 }
 
 body.lol zones zone {
-	border-color: rgb(18, 84, 128);
+	border-color: rgb(18, 84, 128); /* = zones background */
 }
 
 body.lol piece square, body.lol zone > square {
-	background-color: rgb(15, 61, 94);
+	background-color: rgb(15, 61, 94); /* = zones background (darker) */
 }

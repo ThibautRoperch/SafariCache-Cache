@@ -64,18 +64,17 @@ function new_problem() {
     compute_animals();
 
     // Exécute le moteur et charge la solution
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-            alert(xhr.responseText);
-            solutions = JSON.parse(xhr.responseText);
-            solution = solutions[0];
-        } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
-            console.log("Fichier controleur.php inexistant");
-        }
-    };
-    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
-    xhr.send();
+    // var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function() {
+    //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    //         solutions = JSON.parse(xhr.responseText);
+    //         solution = solutions[0];
+    //     } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
+    //         console.log("Fichier controleur.php inexistant");
+    //     }
+    // };
+    // xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
+    // xhr.send();
 }
 
 function check_solution() {
