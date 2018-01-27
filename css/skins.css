@@ -62,9 +62,8 @@ piece square, zone > square {
 /* LoL */
 
 body.lol background {
-    background-image: url("https://am-a.akamaihd.net/image?f=https%3A%2F%2Funiverse-meeps.leagueoflegends.com%2Fv1%2Fassets%2Fimages%2Ffactions%2Fimage-gallery%2Fdemacia-templelightbringers.jpg");
-	filter: blur(0px);
-    opacity: 0.3;
+    background-image: url("https://lh3.googleusercontent.com/MzMocNj_aE_-koTP0osVwfJewQY2hNnkrmXn1OFLMY0GC5p0L5cGjv-JqM_rMcdVp2P3Be3Hgg");
+    filter: blur(2px);
 }
 
 body.lol animal {
