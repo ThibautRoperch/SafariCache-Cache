@@ -18,23 +18,21 @@
 	<background></background>
 
 	<audio id="audioPlayer" src="music/Theme.mp3" autoplay loop="true"></audio>
+	<audio id="victory" src="music/victory.mp3"></audio>
 	
 	<aside>
 		<img class="selected" onclick="change_skin(this, 'classic')" src="img/animals/lion.png" />
 		<img onclick="change_skin(this, 'lol')" src="https://media.lolusercontent.com/api/embedly/1/image/resize?url=http%3A%2F%2Fimgur.com%2FxNLs83T.png&key=a45e967db0914c7fb472fd4381e6c85b&width=425" />
 	</aside>
 
-	<game>
-		<chrono>
-			00:00
-		</chrono>
-	</game>
+	<chrono>
+	</chrono>
 
 	<header>
 		<img class="note" src="img/note.png" onclick="sound()" />
 		
 		<commands>
-			<button onclick="choose_problem()">Choisir un défi</button>
+			<button onclick="choose_problem()">Nouveau défi</button>
 		</commands>
 
 		<objectives>
@@ -49,6 +47,9 @@
 			<button onclick="solve_problem()">Résolution<br>automatique</button>
 		</commands>
 	</header>
+
+	<best>
+	</best>
 	
 	<section>
 	

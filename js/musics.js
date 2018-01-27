@@ -14,5 +14,11 @@ function sound() {
 }
 
 function play_victory() {
-    // TODO
+    var victory = document.querySelector('#victory');
+    
+    victory.play();
+
+    setTimeout(function() {
+        victory.pause();
+    }, victory.duration * 1000);
 }
