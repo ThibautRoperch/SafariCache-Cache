@@ -434,6 +434,6 @@ function compute_animals() {
     
     if (solution_found && check_solution()) {
         play_victory();
-        display_popup("👏", "Vous avez réussi ce défi, vous gagnez un point !");
+        display_popup("👏", "Vous avez réussi ce défi !");
     }
 }

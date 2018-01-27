@@ -1,7 +1,8 @@
 
 let problems = new Array(); // liste des problèmes
-let solutions = new Array(); // liste des solutions du problème en cours
-let solution = new Array(); // solution unique du problème en cours
+let solutions = new Array(); // liste des solutions
+let scores = new Array(); // liste des meilleurs scores
+let current_index = -1; // indice du problème/solution/score en cours
 
 function load_problems() {
     open_file("moteur/problemes.json", load_solutions);
@@ -33,8 +34,8 @@ function open_file(file_path, callback) {
 function new_problem() {
     reset_pieces();
     
-    var rand_index = Math.round(Math.random() * (problems.length - 1));
-    var defi = problems[rand_index];
+    current_index = Math.round(Math.random() * (problems.length - 1));
+    var defi = problems[current_index];
 
     // Récupère et affiche l'occurence objectif de chaque animal
     for (animal in defi) {
@@ -63,24 +64,23 @@ function new_problem() {
     compute_animals();
 
     // Exécute le moteur et charge la solution
-    // var xhr = new XMLHttpRequest();
-    // xhr.onreadystatechange = function() {
-    //     if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-    //         solutions = JSON.parse(xhr.responseText);
-    //         solution = solutions[0];
-    //     } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
-    //         console.log("Fichier controleur.php inexistant");
-    //     }
-    // };
-    // xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
-    // xhr.send();
-
-    // Solution déjà chargée au format JSON
-    solution = solutions[rand_index];
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            alert(xhr.responseText);
+            solutions = JSON.parse(xhr.responseText);
+            solution = solutions[0];
+        } else if (xhr.readyState == 4 && !(xhr.status == 200 || xhr.status == 0)) {
+            console.log("Fichier controleur.php inexistant");
+        }
+    };
+    xhr.open("GET", 'controleur.php?e=' + defi["elephant"] + '&g=' + defi["gazelle"] + '&l=' + defi["lion"] + '&r=' + defi["rhinoceros"] + '&z=' + defi["zebre"], true);
+    xhr.send();
 }
 
 function check_solution() {
     var correct_solution = true;
+    var solution = solutions[current_index];
 
     /*
         piece1 : zone_id_ rotation
@@ -115,6 +115,8 @@ function check_solution() {
 }
 
 function solve_problem() {
+    var solution = solutions[current_index];
+
     // Pour chaque pièce de la solution, la placer dans sa zone et la tourner
     var piece_id = 1;
     for (piece in solution) {
@@ -129,10 +131,12 @@ function solve_problem() {
     // Actualise le nombre d'animaux cachés par rapport à l'objectif
     compute_animals();
 
-    display_popup("👎", "Vous avez utilisé la résolution automatique pour ce défi, vous ne gagnez donc pas de point.", "Générer un autre défi");
+    display_popup("👎", "Défi terminé avec la résolution automatique.", "Générer un autre défi");
 }
 
 function give_clue() {
+    var solution = solutions[current_index];
+
     // Pour chaque zone, si il y a une pièce, la comparer avec la solution
     for (zone of document.getElementsByTagName("zones")[0].children) {
         if (zone.childElementCount > 9) {

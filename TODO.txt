@@ -6,4 +6,4 @@ Langage de backend : Choco (Java), OR-Tools (Python, C#, Java), GECODE (C++)
 
 Thème logiciels (firefox, ...)
 Thème langages
-Triche possible, faire qlqchose contre ca ? (enlever un point, ...)
+chose_problem()
