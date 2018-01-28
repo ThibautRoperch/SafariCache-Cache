@@ -6,6 +6,7 @@ function display_popup(emoji, message) {
     popup.className = "normal";
     popup.children[0].innerHTML = emoji;
     popup.children[1].innerHTML = message;
+    popup.children[2].innerHTML = "Nouveau défi";
     layer.className = "displayed";
 }
 
