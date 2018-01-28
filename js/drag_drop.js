@@ -31,11 +31,6 @@ function move(piece) {
     // Démarrer le chronomètre si c'est pas déjà fait
     start_chrono();
 
-    // Enlever l'effet de give_clue
-    for (p of document.querySelectorAll("piece")) {
-        p.style.background = "transparent";
-    }
-
     var piece_pos = piece_translation(piece);
 
     var mouse_pos_diff = [mouse_pos_actual[0] - mouse_pos_previous[0], mouse_pos_actual[1] - mouse_pos_previous[1]]; // Recalcul de la différence entre la pos actuelle et la pos précédente
@@ -72,6 +67,11 @@ function place(piece) {
 
 // Rotation la pièce de 90 degrés sans le sens horaire
 function rotate(piece) {
+    // Enlever l'effet de give_clue
+    for (p of document.querySelectorAll("piece")) {
+        p.style.background = "transparent";
+    }
+
     piece_pos = piece_translation(piece);
     piece.style.transform = "translate(" + piece_pos[0] + "px, " + piece_pos[1] + "px) rotate(" + parseInt(piece_rotation(piece) + 90) + "deg)";
 
@@ -87,6 +87,11 @@ function rotate(piece) {
 
 // Ajoute la pièce à l'élément DOM donné
 function append_piece(piece, destination) {
+    // Enlever l'effet de give_clue
+    for (p of document.querySelectorAll("piece")) {
+        p.style.background = "transparent";
+    }
+
     // Réinitialisation de la visibilité et de la translation
     piece.style.visibility = "visible";
     piece.style.transform = "translate(0, 0) rotate(" + piece_rotation(piece) + "deg)";
