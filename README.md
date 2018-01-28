@@ -13,7 +13,7 @@ Thibaut Roperch
 Le but du jeu est de couvrir, au moyen de 4 pièces prédéfinies, un certain nombre de dessins répartis sur les 4 zones du plateau. L'objectif donné par le jeu est le nombre de dessins devant être visibles.
 
 
-Notre interface graphique permet de joueur à 169 défis. Les défis disponibles sont tous les problèmes pour lesquels il existe une et une seule solution.
+Notre interface graphique permet de joueur à 169 défis. Les défis disponibles sont les problèmes pour lesquels il existe une et une seule solution.
 
 La résolution d'un défi, aléatoirement donné, est chronométrée. Le meilleur score de chaque défi, en terme de temps, est sauvegardé pour la session et affiché.
 
@@ -23,9 +23,10 @@ La résolution d'un défi, aléatoirement donné, est chronométrée. Le meilleu
 * Une pièce mal placée aura un fond rouge
 * Une pièce correctement placée mais mal tournée aura un fond orange
 * Une pièce correctement placée et correctement tournée aura un fond vert
+
 Cependant, utiliser un indice ajoute 20 secondes au chronomètre.
 
-Notre interface propose également de passer un défi et une résolution automatique.
+Notre interface propose également de passer le défi actuel et de le résoudre automatiquement.
 
 ## Utilisation
 

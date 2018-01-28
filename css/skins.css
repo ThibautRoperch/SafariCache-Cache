@@ -1,13 +1,8 @@
 
-/* Classic (par défaut) */
+/* Default */
 
-body.classic background {
-    background-image: url("../img/animals/savane.png");
-	filter: blur(4px);
-}
-
-animal {
-    background-size: 70%;
+objectives animal {
+	background-size: 70%;
 }
 
 .elephant {
@@ -30,32 +25,76 @@ animal {
 	background-image: url("../img/animals/zebra.png");
 }
 
-piece#piece1 square {
-	background-image: url("../img/jungle/jungle1.jpeg");
-}
-
-piece#piece2 square {	
-	background-image: url("../img/jungle/jungle2.jpeg");
-}
-
-piece#piece3 square {	
-	background-image: url("../img/jungle/jungle3.jpeg");
-}
-
-piece#piece4 square {	
-	background-image: url("../img/jungle/jungle4.jpeg");
+piece square {
+	background-image: url("../img/b_w_gradient.jpg");
 }
 
 zones {
+	background: rgba(0, 0, 0, 0.1); /* = border-color */
+	border-color: rgba(0, 0, 0, 0.1); /* = background */
+}
+
+zones zone {
+	border-color: rgba(0, 0, 0, 0.1); /* = zones background */
+}
+
+piece square, zone > square {
+	background-color: rgba(0, 0, 0, 0.15); /* = zones background (darker) */
+}
+
+/* Classic */
+
+body.classic background {
+    background-image: url("../img/classic/savane.png");
+	filter: blur(4px);
+}
+
+body.classic .elephant {
+	background-image: url("../img/classic/elephant.png");
+}
+
+body.classic .giraffe {
+	background-image: url("../img/classic/giraffe.png");
+}
+
+body.classic .lion {
+	background-image: url("../img/classic/lion.png");
+}
+
+body.classic .rhino {
+	background-image: url("../img/classic/rhino.png");
+}
+
+body.classic .zebra {
+	background-image: url("../img/classic/zebra.png");
+}
+
+body.classic piece#piece1 square {
+	background-image: url("../img/classic/jungle1.jpeg");
+}
+
+body.classic piece#piece2 square {	
+	background-image: url("../img/classic/jungle2.jpeg");
+}
+
+body.classic piece#piece3 square {	
+	background-image: url("../img/classic/jungle3.jpeg");
+}
+
+body.classic piece#piece4 square {	
+	background-image: url("../img/classic/jungle4.jpeg");
+}
+
+body.classic zones {
 	background: #A7C628; /* = border-color */
 	border-color: #A7C628; /* = background */
 }
 
-zones zone {
+body.classic zones zone {
 	border-color: #A7C628; /* = zones background */
 }
 
-piece square, zone > square {
+body.classic piece square, body.classic zone > square {
 	background-color: #8EA823; /* = zones background (darker) */
 }
 
@@ -66,7 +105,7 @@ body.lol background {
 	filter: blur(4px);
 }
 
-body.lol animal {
+body.lol objectives animal {
 	background-size: 100%;
 }
 
@@ -88,6 +127,10 @@ body.lol .rhino {
 
 body.lol .zebra {
 	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Ryze.png");
+}
+
+body.lol piece square {
+	background-image: url("../img/lol/nocturne.jpg");
 }
 
 body.lol zones {
@@ -131,6 +174,10 @@ body.applis .zebra {
 	background-image: url("http://www.journaldugeek.com/files/2012/11/windows-live-messenger-2012.png");
 }
 
+body.applis piece square {
+	background-image: url("../img/applis/android.png");
+}
+
 body.applis zones {
 	background: rgb(119, 48, 104); /* = border-color */
 	border-color: rgb(119, 48, 104); /* = background */
@@ -172,6 +219,10 @@ body.languages .zebra {
 	background-image: url("https://blog.zenika.com/wp-content/uploads/2016/04/java-logo.png");
 }
 
+body.languages piece square {
+	background-image: url("../img/languages/cpu.jpg");
+}
+
 body.languages zones {
 	background: rgb(5, 173, 44); /* = border-color */
 	border-color: rgb(5, 173, 44); /* = background */
@@ -182,5 +233,5 @@ body.languages zones zone {
 }
 
 body.languages piece square, body.languages zone > square {
-	background-color:rgb(20, 41, 25); /* = zones background (darker) */
+	background-color:rgb(43, 88, 53); /* = zones background (darker) */
 }

@@ -142,6 +142,7 @@ function solve_problem() {
 
 function give_clue() {
     var solution = solutions[current_index];
+    var at_least_one_piece = false;
 
     // Pour chaque zone, si il y a une pièce, la comparer avec la solution
     for (zone of document.getElementsByTagName("zones")[0].children) {
@@ -160,8 +161,10 @@ function give_clue() {
             } else {
                 piece.style.background = "rgba(255, 0, 0, 0.5)";
             }
+            at_least_one_piece = true;
         }
     }
 
-    add_chrono(30);
+    if (at_least_one_piece)
+        add_chrono(30);
 }
