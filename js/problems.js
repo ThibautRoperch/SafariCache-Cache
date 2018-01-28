@@ -151,7 +151,8 @@ function give_clue() {
             var zone_id = zone.id + "_"; // pour faire comme dans le JSON
 
             if (zone_id === Object.keys(solution)[parseInt(piece_id) - 1]) { // si l'élément en [indice piece - 1] a pour clef zone_id_, c'est qu'elle est au bon endroit
-                if (((piece_rotation(piece) % 360) / 90) + 1 == solution[zone_id]) {
+            var modulo = (parseInt(piece_id) == 1) ? 180 : 360;
+            if (((piece_rotation(piece) % modulo) / 90) + 1 == solution[zone_id]) {
                     piece.style.background = "rgba(0, 255, 0, 0.5)";
                 } else {
                     piece.style.background = "rgba(255, 165, 0, 0.5)";
@@ -162,5 +163,5 @@ function give_clue() {
         }
     }
 
-    add_chrono(20);
+    add_chrono(30);
 }

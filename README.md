@@ -8,6 +8,25 @@ Pierre Granier--Richard
 Maxime Leblanc
 Thibaut Roperch
 
+## Règles du jeu
+
+Le but du jeu est de couvrir, au moyen de 4 pièces prédéfinies, un certain nombre de dessins répartis sur les 4 zones du plateau. L'objectif donné par le jeu est le nombre de dessins devant être visibles.
+
+
+Notre interface graphique permet de joueur à 169 défis. Les défis disponibles sont tous les problèmes pour lesquels il existe une et une seule solution.
+
+La résolution d'un défi, aléatoirement donné, est chronométrée. Le meilleur score de chaque défi, en terme de temps, est sauvegardé pour la session et affiché.
+
+⭯ permet de remettre les pièces à leur position initiale.
+
+💡 permet de donner un indice sur les pièces actuellement placées sur le plateau, le résultat devant être interprété comme suit :
+* Une pièce mal placée aura un fond rouge
+* Une pièce correctement placée mais mal tournée aura un fond orange
+* Une pièce correctement placée et correctement tournée aura un fond vert
+Cependant, utiliser un indice ajoute 20 secondes au chronomètre.
+
+Notre interface propose également de passer un défi et une résolution automatique.
+
 ## Utilisation
 
 Les problèmes à une solution sont générés dans le fichier `moteur/problemes.json`. Les solutions de ces problèmes sont dans le fichier `moteur/solutions.json`. Si ces fichiers ne sont pas présents, installer MiniZinc (voir section suivante) et lancer le générateur de problèmes avec la commande suivante (environ 10 minutes d'exécution) :

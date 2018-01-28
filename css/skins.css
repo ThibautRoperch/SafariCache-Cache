@@ -62,9 +62,8 @@ piece square, zone > square {
 /* LoL */
 
 body.lol background {
-    background-image: url("https://am-a.akamaihd.net/image?f=https%3A%2F%2Funiverse-meeps.leagueoflegends.com%2Fv1%2Fassets%2Fimages%2Ffactions%2Fimage-gallery%2Fdemacia-templelightbringers.jpg");
-	filter: blur(0px);
-    opacity: 0.3;
+    background-image: url("../img/lol/loading.png");
+	filter: blur(4px);
 }
 
 body.lol animal {
@@ -76,11 +75,11 @@ body.lol .elephant {
 }
 
 body.lol .giraffe {
-	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Xayah.png");
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Blitzcrank.png");
 }
 
 body.lol .lion {
-	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Ornn.png");
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Zac.png");
 }
 
 body.lol .rhino {
@@ -88,7 +87,7 @@ body.lol .rhino {
 }
 
 body.lol .zebra {
-	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Annie.png");
+	background-image: url("https://ddragon.leagueoflegends.com/cdn/8.2.1/img/champion/Ryze.png");
 }
 
 body.lol zones {
@@ -102,4 +101,86 @@ body.lol zones zone {
 
 body.lol piece square, body.lol zone > square {
 	background-color: rgb(15, 61, 94); /* = zones background (darker) */
+}
+
+/* Applications */
+
+body.applis background {
+    background-image: url("../img/applis/ubuntu.png");
+	filter: blur(2px);
+}
+
+body.applis .elephant {
+	background-image: url("https://cdn.portableapps.com/FirefoxPortable_128-Quantum.png");
+}
+
+body.applis .giraffe {
+	background-image: url("https://a.slack-edge.com/436da/marketing/img/meta/app-256.png");
+	background-size: 60%;
+}
+
+body.applis .lion {
+	background-image: url("https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2013/02/icon.png");
+}
+
+body.applis .rhino {
+	background-image: url("https://dl2.macupdate.com/images/icons256/54025.png?d=1515825168");
+}
+
+body.applis .zebra {
+	background-image: url("http://www.journaldugeek.com/files/2012/11/windows-live-messenger-2012.png");
+}
+
+body.applis zones {
+	background: rgb(119, 48, 104); /* = border-color */
+	border-color: rgb(119, 48, 104); /* = background */
+}
+
+body.applis zones zone {
+	border-color: rgb(119, 48, 104); /* = zones background */
+}
+
+body.applis piece square, body.applis zone > square {
+	background-color:rgb(94, 38, 82); /* = zones background (darker) */
+}
+
+/* Langages */
+
+body.languages background {
+    background-image: url("../img/languages/matrix.jpg");
+	filter: blur(8px);
+}
+
+body.languages .elephant {
+	background-image: url("http://antonin-web.fr/portfoliodocs/image/langage/cpp.png");
+}
+
+body.languages .giraffe {
+	background-image: url("https://fr.seaicons.com/wp-content/uploads/2015/07/Other-html-5-icon.png");
+}
+
+body.languages .lion {
+	background-image: url("https://cdn.portableapps.com/SWI-PrologPortable_128.png");
+}
+
+body.languages .rhino {
+	background-image: url("http://www.minizinc.org/MiniZn_logo.png");
+	background-size: 65%;
+}
+
+body.languages .zebra {
+	background-image: url("https://blog.zenika.com/wp-content/uploads/2016/04/java-logo.png");
+}
+
+body.languages zones {
+	background: rgb(5, 173, 44); /* = border-color */
+	border-color: rgb(5, 173, 44); /* = background */
+}
+
+body.languages zones zone {
+	border-color: rgb(5, 173, 44); /* = zones background */
+}
+
+body.languages piece square, body.languages zone > square {
+	background-color:rgb(20, 41, 25); /* = zones background (darker) */
 }
