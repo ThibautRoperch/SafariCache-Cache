@@ -23,7 +23,7 @@ div#popup  {
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid gray;
 }
 

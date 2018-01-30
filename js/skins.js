@@ -11,6 +11,10 @@ function change_skin(img, skin) {
     img.className = "selected";
 
     // Change la source de la musique thème
-    var player = document.querySelector('#audioPlayer');
-    player.src = "music/" + skin + ".mp3";
+    var theme = document.querySelector('#audioPlayer');
+    theme.src = "music/theme/" + skin + ".mp3";
+
+    // Change la source de la musique de victoire
+    var victory = document.querySelector('#victory');
+    victory.src = "music/victory/" + skin + ".mp3";
 }
