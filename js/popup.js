@@ -36,7 +36,7 @@ function display_rules() {
     message += "<li>Une pièce correctement placée mais mal tournée aura un fond orange";
     message += "<li>Une pièce correctement placée et correctement tournée aura un fond vert";
     message += "</ul>";
-    message += "Cependant, utiliser un indice ajoute 20 secondes au chronomètre.";
+    message += "Cependant, utiliser un indice ajoute 60 secondes au chronomètre.";
     message += "<br>";
     message += "<br>";
     message += "Notre interface propose également de passer le défi actuel et de le résoudre automatiquement.";

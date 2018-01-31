@@ -24,7 +24,7 @@ La résolution d'un défi, aléatoirement donné, est chronométrée. Le meilleu
 * Une pièce correctement placée mais mal tournée aura un fond orange
 * Une pièce correctement placée et correctement tournée aura un fond vert
 
-Cependant, utiliser un indice ajoute 20 secondes au chronomètre.
+Cependant, utiliser un indice ajoute 60 secondes au chronomètre.
 
 Notre interface propose également de passer le défi actuel et de le résoudre automatiquement.
 

@@ -166,5 +166,5 @@ function give_clue() {
     }
 
     if (at_least_one_piece)
-        add_chrono(30);
+        add_chrono(60);
 }
